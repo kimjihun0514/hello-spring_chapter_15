@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: #333;
+  text-decoration: none;
+}
+
+div.grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: minmax(28px, auto) 28px 320px 1fr;
+  row-gap: 10px;
+}
+
+div.grid-view-board {
+  grid-template-rows: repeat(6, 28px) 320px 1fr;
+}
+
+div.grid > div.btn-group {
+  grid-column: 1 / -1;
+}
+
+.right-align {
+  text-align: right;
+}
+
+label {
+  padding-left: 10px;
+}
+
+button,
+input,
+textarea {
+  padding: 10px;
+}
+
+input[type="file"] {
+  padding: 0;
+}
+
+textarea {
+  height: 300px;
+}
+
+.right-align > a {
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+	margin-left: 1rem;
+}
+
+div.error {
+	font-size: 0.8rem;
+	color: #a00;
+}
+
+.replies {
+	grid-column: 1 / -1;
+	border: 1px solid #333;
+	padding: 1rem;
+	margin-top: 1rem;
+	padding-bottom: 0.2rem;
+}
+
+.replies > .write-reply {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: minmax(0rem, auto) 1fr 40px;
+	gap: 10px;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.replies > .write-reply > .txt-reply {
+	height: 150px;
+	display: grid;
+	grid-column: 1 / -1;
+}
+
+.replies > .reply-items {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	row-gap: 10px;
+}
+
+.reply {
+	border: 1px solid #333;
+	width: max-content;
+	padding: 1rem;
+	border-radius: 10px;
+}
+
+.recommand-count {
+	padding-top: 1rem;
+}
+
+.modify-reply, .delete-reply, .re-reply, .recommend-reply {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	margin-right: 10px;
+}
